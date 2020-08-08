@@ -1,13 +1,22 @@
 {
-  "name": "graphql-redis",
+  "name": "apollo-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a boilerplate example. Implementing: apollo server, typescript. See ReadMe for details",
   "main": "src/index.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon --exec babel-node --extensions '.ts' src/index.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "inspiraller",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inspiraller/apollo-typescript"
+  },
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "os" : [ "win32" ],
   "types": "./index.d.ts",
   "dependencies": {
     "@babel/register": "^7.10.5",
