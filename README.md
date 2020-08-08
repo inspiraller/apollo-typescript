@@ -19,3 +19,117 @@ Query: {
 ```
 
 ## Write tests against example
+
+***
+
+# Prerequisites
+- node 10
+- windows (other os should work too but maybe variations)
+
+# Steps to run 
+#### Using cmd - Create a directory you want to work in and cd into it
+```
+mkdir myproject && cd myproject
+```
+
+#### Using cmd - clone this project into your folder
+```
+git clone https://github.com/inspiraller/apollo-typescript.git
+```
+Creates
+
+```
+myproject 
+|_ apollo-typescript
+```
+
+#### Using cmd - npm install dependencies
+```
+npm i
+```
+
+#### run project 
+```
+npm start
+```
+
+#### visit browser  - chrome, firefox, internet explorer
+localhost:4000
+
+#### Add this to left hand side 
+```javascript
+query players {
+  players {
+    id
+    name
+  }
+}
+
+ mutation AddPlayer($name: String!) {
+  addPlayer(
+    player: {
+      name: $name
+    }
+  ) {
+    id
+    name
+  }
+}
+```
+#### Press Play button - select - players
+- View right hand side 
+```javascript
+{
+  "data": {
+    "players": [
+      {
+        "id": "alpha",
+        "name": "terry"
+      },
+      {
+        "id": "beta",
+        "name": "pc"
+      },
+    ]
+  }
+}
+```
+#### Add query variable below by clicking - query variables 
+- Add 
+```javascript 
+{
+  "name": "john"
+}
+```
+
+#### Press Play button - select - addPlayer
+- See
+```javascript
+  {
+    "id": "544ec342a36903fa047c",
+    "name": "john"
+  }
+```
+#### Press Play button - select - players - to see your added player
+```javascript
+{
+  "data": {
+    "players": [
+      {
+        "id": "alpha",
+        "name": "terry"
+      },
+      {
+        "id": "beta",
+        "name": "pc"
+      },
+      {
+        "id": "544ec342a36903fa047c",
+        "name": "john"
+      }
+    ]
+  }
+}
+```
+
+# done!!!
